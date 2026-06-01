@@ -112,12 +112,26 @@ rss:
     - id: "ruanyifeng"
       name: "阮一峰的网络日志"
       url: "http://www.ruanyifeng.com/blog/atom.xml"
-      enabled: false                  # 禁用
-      # max_age_days: 3               # 示例：推送 3 天内的文章（更新较慢的博客）
-     
+      enabled: false
+
     - id: "yahoo-finance"
       name: "雅虎财经"
       url: "https://finance.yahoo.com/news/rssindex"
+
+    - id: "bing-keji"
+      name: "Bing科技编程"
+      url: "https://www.bing.com/news/search?q=科技+编程&format=RSS"
+
+    - id: "bing-ai"
+      name: "bing人工智能"
+      url: "https://www.bing.com/news/search?q=人工智能&format=RSS"
+
+    - id: "bing-god"
+      name: "bing黄金财经"
+      url: "https://www.bing.com/news/search?q=黄金价格+走势&format=RSS"
+
+
+
 
     # 自定义源示例
     # - id: "custom-feed"
@@ -223,8 +237,8 @@ display:
   # 独立展示区：将指定平台/RSS 完整展示，不受关键词过滤
   # 推送展示由 regions.standalone 控制，AI 分析由 ai_analysis.include_standalone 控制
   standalone:
-    platforms: ["zhihu", "wallstreetcn-hot"]     # 热榜平台 ID 列表（如 ["zhihu", "weibo"]）
-    rss_feeds: []                                # RSS 源 ID 列表（如 ["hacker-news"]）
+    platforms: ["zhihu","wallstreetcn-hot","baidu","toutiao","bilibili-hot-search","cls-hot","thepaper","weibo","douyin","tieba"] # 热榜平台 ID 列表（如 ["zhihu", "weibo"]）
+    rss_feeds: ["hacker-news","ruanyifeng"] # RSS 源 ID 列表（如 ["hacker-news"]）
     max_items: 20                                # 每个源最多展示条数（0=不限制）
 
 
